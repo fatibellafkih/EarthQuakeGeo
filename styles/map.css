@@ -1,0 +1,44 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        width: 80%;
+        margin: 0 auto;
+        height: 80%;
+        border-radius: 5px;
+      }
+      #title{
+        text-align: center;
+      }
+      #form{
+        margin: 0 auto;
+        width: 80%;
+      }
+      #bloc1{
+        width: 50%;
+        float: left;
+      }
+      #bloc11{
+        float:left;
+      }
+      #bloc21{
+        float:left;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      footer {
+        width: 100%;
+        display: inline-block;
+        margin: 2em 0;
+        height: 50px;
+        background-color: #999;
+        text-align: center;
+        }
+        #bloc22{
+          float : left;
+        }
