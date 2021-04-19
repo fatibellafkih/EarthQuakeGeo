@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>EarthQuakeGeo</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./styles/map.css" />
-    <script src="./scripts/map.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1 id="title">Visualisation of Earthquakes around the world</h1>
-    </header>
-    <section>
-      <div id="form">
-        <form id="earthsearch" onsubmit="getInput()">
-          <div id="bloc1">
-            <label for="maptime">Choose a period of time</label><br>
-            <div id="bloc11">
-              <label for="datemin">from :</label>
-              <input type="date" id="datemin" name="datemin" min="2000-01-01" max="2021-01-01"><br><br>
-            </div>
-            <div id="bloc12">
+<html lang="en" xml:lang="en">
+
+<head>
+  <title>EarthQuakeGeo</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/map.css" />
+  <script src="./scripts/map.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Visualisation of Earthquakes around the world</h1>
+  </header>
+  <section>
+    <div id="form">
+      <form id="earthsearch" onsubmit="getInput()">
+        <div id="bloc1">
+          <label for="maptime">Choose a period of time</label><br>
+          <div id="bloc11">
+            <label for="datemin">from :</label>
+            <input required type="date" id="datemin" name="datemin"><br><br>
+          </div>
+          <div id="bloc12">
             <label for="datemax">to :</label>
-            <input type="date" id="datemax" name="datemax" min="2000-01-01" max="2021-01-01"><br><br>
+            <input required type="date" id="datemax" name="datemax"><br><br>
           </div>
+        </div>
+        <div id="bloc2">
+          <label for="mapmagn">Choose range of magnitude</label><br>
+          <div id="bloc21">
+            <label for="magnmin">minimum :</label>
+            <input required type="number" name="magnmin" id="magnmin" step="0.1" min="2.5" max="8.0"><br><br>
           </div>
-          <div id="bloc2">
-            <label for="mapmagn">Choose range of magnitude</label><br>
-            <div id="bloc21">
-              <label for="magnmin">minimum :</label>
-              <input type="number" name="magnmin" id="magnmin" step="0.1" min="2.5"><br><br>
-            </div>
-            <div id="bloc22">
+          <div id="bloc22">
             <label for="magnmax">maximum :</label>
-            <input type="number" name ="magnmax" id="magnmax" step="0.1" max="8.0"><br><br>
+            <input required type="number" name="magnmax" id="magnmax" step="0.1" min="2.5" max="8.0"><br><br>
           </div>
           <div id="bloc23">
             <button type="submit" id="search">Search</button>
           </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <div id="map">
+        </div>
+      </form>
+    </div>
+  </section>
+  <div id="map">
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7zn6DIXiAwixrn9TeJ6zskwUyGGMeTg0&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-    </div>
+      async></script>
+  </div>
   <footer>
     <div class="copyright">
       <p>EarthQuakeGeo &copy - 2021</p>
